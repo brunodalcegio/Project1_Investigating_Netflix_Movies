@@ -8,11 +8,11 @@ netflix_df = pd.read_csv("netflix_data.csv")
 
 # start coding here
 # Filter movies only, and only from the 1990s 
-filtro = (   (netflix_df["type"] == "Movie") &  
+filter1 = (   (netflix_df["type"] == "Movie") &  
              (netflix_df["release_year"] >= 1990) & 
              (netflix_df["release_year"] < 2000)
          )
-netflix_1990s = netflix_df.loc[filtro] # salvando as row,column que se encaixem no filtro
+netflix_1990s = netflix_df.loc[filter1] # salvando as row,column que se encaixem no filtro
 print(netflix_1990s)
 
 
